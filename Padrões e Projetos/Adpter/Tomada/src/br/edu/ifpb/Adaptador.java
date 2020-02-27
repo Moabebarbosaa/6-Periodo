@@ -1,10 +1,15 @@
 package br.edu.ifpb;
 
 public class Adaptador implements Alvo {
-    TomadaDoisPinos tomadaDoisPinos;
+    ClienteTresPinos clienteTresPinos;
+
+    public Adaptador(ClienteTresPinos clienteTresPinos) {
+        this.clienteTresPinos = clienteTresPinos;
+    }
 
     @Override
     public void conectarTomadaDeTresPinos() {
-        tomadaDoisPinos.conectarTomadaDoisPinos();
+        TomadaDoisPinos tomadaDoisPinos = new TomadaDoisPinos(clienteTresPinos.getFase(), clienteTresPinos.getNeutro());
+        tomadaDoisPinos.ConectarTomada();
     }
 }
