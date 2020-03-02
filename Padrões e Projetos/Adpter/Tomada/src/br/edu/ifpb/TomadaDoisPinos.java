@@ -15,4 +15,5 @@ public class TomadaDoisPinos {
         System.out.println("Fase: " + fase);
         System.out.println("Neutro: " + neutro);
     }
+
 }
